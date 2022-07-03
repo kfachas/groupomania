@@ -70,6 +70,8 @@ const CommentsComponent = ({
         });
         if (res && res.data && res.data.length > 0) {
           setComments(res.data);
+        } else {
+          setComments([]);
         }
       } catch (error) {
         console.error(error);
@@ -83,6 +85,7 @@ const CommentsComponent = ({
 
   const refreshComments = (refreshComment = false) => {
     refreshComment && setComment("");
+
     refreshData(); // refresh posts
 
     setForceRefresh((prev) => !prev); // refresh comments

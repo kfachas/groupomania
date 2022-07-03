@@ -15,7 +15,7 @@ if (port === 3310) {
 
 con.query(
   "SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));",
-  (err, res) => console.log({ err, res })
+  (err, res) => err && console.log({ err })
 );
 
 // const createUserTable = `CREATE TABLE users (id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(100) NOT NULL, last_name VARCHAR(100) NOT NULL, email VARCHAR(255) NOT NULL UNIQUE, password BINARY(60) NOT NULL, image_url VARCHAR(255), is_admin BOOLEAN NOT NULL DEFAULT 0);`;
@@ -31,8 +31,7 @@ con.query(
 // con.query(createLikeTable, (err, res) => console.log({ err, res }));
 // con.query(createCommentTable, (err, res) => console.log({ err, res }));
 
-// axelponton@gmail.com   Motdepasse! isAdmin
-// kfachas@gmail.com   motdepasse! isNotAdmin
+con.query("SHOW COLUMNS FROM likes;", (err, res) => console.log({ err, res }));
 
 con.connect((err) => {
   if (err) throw err;

@@ -221,7 +221,10 @@ const ProfilComponent = ({ handleSnackBarData }) => {
         {values.filePreview && (
           <Box textAlign="center" height="100px" width="100px" maxWidth="100%">
             <Avatar
-              alt="selfie"
+              sx={{
+                border: "1.5px solid #FFF",
+              }}
+              alt={userData.firstName || "photo de profil"}
               src={values.filePreview}
               className={classes.avatar}
             />

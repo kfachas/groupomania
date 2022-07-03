@@ -171,7 +171,7 @@ const AppBarComponent = ({ refreshToken }) => {
                   <Button
                     key={index}
                     onClick={() => handleCloseNavMenu(url)}
-                    sx={{ my: 2, color: "white", display: "block" }}
+                    sx={{ my: 2, color: "#FFF", display: "block" }}
                   >
                     {label}
                   </Button>
@@ -190,7 +190,11 @@ const AppBarComponent = ({ refreshToken }) => {
                   </Typography>
                 )}
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src={userData.imageUrl || ""}>
+                  <Avatar
+                    sx={{ border: "1.5px solid #FFF" }}
+                    alt={userData.firstName}
+                    src={userData.imageUrl || ""}
+                  >
                     {userData.firstName.charAt(0)}
                   </Avatar>
                 </IconButton>

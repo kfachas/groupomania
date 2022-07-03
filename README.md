@@ -27,7 +27,7 @@ En faisant la commande : git clone le-lien-du-repos
 
 ```
 1. Dans le terminal, se placer dans le dossier /back-end/
-2. Installer npm en exécutant la commande => _npm install_
+2. Installer les packages en exécutant la commande => npm install
 3. Créer un fichier .env à la racine du dossier avec les informations de votre compte MySQL :
    - DB_USERNAME="VOTRE_NOM_UTILISATEUR_MYSQL"
    - DB_PASSWORD="VOTRE_MOT_DE_PASSE_MYSQL"
@@ -38,9 +38,9 @@ En faisant la commande : git clone le-lien-du-repos
 ## 5 - Mise en place du front-end
 
 ```
-1. Dans le terminal, se placer dans à la racine
-2. Installer npm en exécutant la commande => _npm install _
-3. Lancer la construction du front-end avec la commande => _npm start_
+1. Dans le terminal, se placer à la racine du dossier
+2. Installer les packages en exécutant la commande => npm install
+3. Lancer la construction du front-end avec la commande => npm start
 ```
 
 ## 6 - Lancer l'application

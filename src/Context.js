@@ -21,8 +21,6 @@ const ContextComponent = ({ children }) => {
       });
     }
   }
-  // useEffect(() => {
-  // }, []);
 
   return (
     <AppContext.Provider value={{ userData, setUserData }}>
