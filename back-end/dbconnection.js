@@ -31,8 +31,6 @@ con.query(
 // con.query(createLikeTable, (err, res) => console.log({ err, res }));
 // con.query(createCommentTable, (err, res) => console.log({ err, res }));
 
-con.query("SHOW COLUMNS FROM likes;", (err, res) => console.log({ err, res }));
-
 con.connect((err) => {
   if (err) throw err;
   console.log("Connecté!");
