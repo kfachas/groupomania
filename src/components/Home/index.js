@@ -13,7 +13,6 @@ const HomeComponent = ({ handleSnackBarData }) => {
 
   const [openPostDialog, setOpenPostDialog] = useState(false);
   const [openCommentDialog, setOpenCommentDialog] = useState(null);
-  const [anchorElComment, setAnchorElComment] = useState(null);
 
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
@@ -32,6 +31,8 @@ const HomeComponent = ({ handleSnackBarData }) => {
 
         if (res && res.data && res.data.length > 0) {
           setPosts(res.data);
+        } else {
+          setPosts([]);
         }
       } catch (error) {
         console.error(error.message);
@@ -76,7 +77,6 @@ const HomeComponent = ({ handleSnackBarData }) => {
   };
 
   const handleOpenCommentDrawer = (e, commentId) => {
-    setAnchorElComment(e.currentTarget);
     setOpenCommentDialog(commentId);
   };
 
