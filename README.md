@@ -13,6 +13,7 @@ Pour installer ce projet, vous devrez d'abord installer :
 
 ```
 En faisant la commande : git clone le-lien-du-repos
+Ou en téléchargeant le projet
 ```
 
 ## 3 - Mise en place de la base de données
